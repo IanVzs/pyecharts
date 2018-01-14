@@ -682,8 +682,8 @@ bar3d.render()
 ```
 ![bar3D-3](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/bar3D-3.gif)
 
-**Note：** 关于 gird3D 部分的设置，请参照通用配置项中的介绍 [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项)  
-**Note：** 可配合 axis3D [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项) 一起使用 
+**Note：** 关于 gird3D 部分的设置，请参照 通用配置项 中的介绍
+**Note：** 可配合 axis3D 通用配置项 一起使用 
 
 
 ## Boxplot（箱形图）
@@ -962,7 +962,7 @@ geo.render()
 ```
 ![geo-0](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/geo-0.gif)
 
-**Note：** 请配合 [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项) 中的 Visualmap 使用
+**Note：** 请配合 通用配置项 中的 Visualmap 使用
 
 Scatter 类型（分段型）
 ```python
@@ -1348,7 +1348,7 @@ heatmap.render()
 ```
 ![heatmap-1](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/heatmap-1.gif)
 
-**Note：** 热力图必须配合 [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项) 中的 VisualMap 使用才有效果。
+**Note：** 热力图必须配合 通用配置项 中的 VisualMap 使用才有效果。
 
 
 ## Kline（K线图）
@@ -1605,8 +1605,8 @@ line3d.render()
 ```
 ![line3D-1](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/line3D-1.gif)
 
-**Note：** 关于 gird3D 部分的设置，请参照通用配置项中的介绍 [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项)  
-**Note：** 可配合 axis3D [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项) 一起使用 
+**Note：** 关于 gird3D 部分的设置，请参照通用配置项中的介绍 通用配置项  
+**Note：** 可配合 axis3D 通用配置项 一起使用 
 
 
 ## Liquid（水球图）
@@ -1749,7 +1749,7 @@ map.render()
 ```
 ![map-1](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/map-1.gif)
 
-**Note：** 请配合 [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项) 中的 Visualmap 使用
+**Note：** 请配合 通用配置项 中的 Visualmap 使用
 
 ```python
 from pyecharts import Map
@@ -2418,7 +2418,7 @@ sc.render()
 ```
 ![scatter-0-3](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/scatter-0-3.gif)
 
-**Note：** 请配合 [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项) 中的 Visualmap 使用
+**Note：** 请配合 通用配置项 中的 Visualmap 使用
 
 散点图默认的坐标轴都为数值轴，如果想实现横坐标为类目轴，可通过 ```xaxis_type``` 修改
 ```python
@@ -2488,8 +2488,8 @@ scatter3D.render()
 ```
 ![scatter3D-0](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/scatter3D-0.gif)
 
-**Note：** 关于 gird3D 部分的设置，请参照通用配置项中的介绍 [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项)  
-**Note：** 可配合 axis3D [通用配置项](https://github.com/chenjiandongx/pyecharts/blob/master/docs/zh-cn/documentation.md#通用配置项) 一起使用 
+**Note：** 关于 gird3D 部分的设置，请参照通用配置项中的介绍 通用配置项  
+**Note：** 可配合 axis3D 通用配置项 一起使用 
 
 
 ## ThemeRiver（主题河流图）
