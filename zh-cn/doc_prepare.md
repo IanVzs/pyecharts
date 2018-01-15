@@ -37,7 +37,7 @@ bar.render()
 ![guide-1](https://raw.githubusercontent.com/chenjiandongx/pyecharts/master/images/guide-1.png)
 
 ### 使用 pyecharts-snapshot 插件
-如果想直接将图片保存为 png, pdf, gif 格式的文件，可以使用 [pyecharts-snapshot](https://github.com/chfw/pyecharts-snapshot)。使用该插件请确保你的系统上已经安装了 node.js 环境，如果没有，请到这里下载 [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+如果想直接将图片保存为 png, pdf, gif 格式的文件，可以使用 [pyecharts-snapshot](https://github.com/pyecharts/pyecharts-snapshot)。使用该插件请确保你的系统上已经安装了 node.js 环境，如果没有，请到这里下载 [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 1. 安装 phantomjs  
     `npm install -g phantomjs-prebuilt`
@@ -49,7 +49,7 @@ bar.render()
     `make_a_snapshot('render.html', 'snapshot.png')`  
     make_a_snapshot() 第一个参数为生成的 .html 文件，第二个参数为要保存的文件，可以为 png/pdf/gif
 
-更多内容请移步至 [pyecharts-snapshot](https://github.com/chfw/pyecharts-snapshot)  
+更多内容请移步至 [pyecharts-snapshot](https://github.com/pyecharts/pyecharts-snapshot)  
 
 
 ### Jupyter notebook 小贴士
@@ -72,7 +72,7 @@ Known nbextensions:
 在特殊的情况下，如果你想要 pyecharts 更新所有的脚本文件的话，你可以运行下面的命令：
 
 ```shell
-$ git clone https://github.com/chfw/jupyter-echarts.git
+$ git clone https://github.com/pyecharts/jupyter-echarts.git
 $ cd jupyter-echarts
 $ jupyter nbextension install echarts --user
 ```
@@ -96,7 +96,7 @@ online()
 ...
 ```
 
-这样，所有的脚本会从 http://chfw.github.io/jupyter-echarts/echarts 下载。如果你连不上 Github, 你可以先把 https://github.com/chfw/jupyter-echarts 克隆一下。然后在你自己的服务器上，把整个 echarts 挂上去。  
+这样，所有的脚本会从 http://pyecharts.github.io/jupyter-echarts/echarts 下载。如果你连不上 Github, 你可以先把 https://github.com/pyecharts/jupyter-echarts 克隆一下。然后在你自己的服务器上，把整个 echarts 挂上去。  
 
 下面我简单示范一下  
 

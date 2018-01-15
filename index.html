@@ -20,14 +20,31 @@
     <div id="app"></div>
     <script>
         window.$docsify = {
-            name: '',
-            repo: '',
+            name: 'pyecharts',
+            repo: 'https://github.com/pyecharts/pyecharts',
             coverpage: true,
             loadSidebar: true,
-            subMaxLevel: 2
+            subMaxLevel: 2,
+            auto2top: true,
+            search: {
+                maxAge: 86400000,
+                paths: [],
+                placeholder: {
+                    '/zh-cn/': '全文搜索',
+                    '/release-note/': '全文搜索',
+                    '/en-us/': 'Search',
+                },
+                noData: {
+                    '/zh-cn/': '找不到结果',
+                    '/release-note/': '找不到结果',
+                    '/en-us/': 'No Results'
+                },
+                depth: 2
+            }
         }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 </body>
 
 </html>
