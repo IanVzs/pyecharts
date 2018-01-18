@@ -105,7 +105,7 @@ $ flask run
 
 效果
 
-![flask-0](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/flask-0.gif)
+![flask-0](https://user-images.githubusercontent.com/19553554/35081158-3faa7c34-fc4d-11e7-80c9-2de79371374f.gif)
 
 ## 模板扩展
 
@@ -214,8 +214,7 @@ def bar_chart():
 
 效果
 
-![flask-1](https://raw.githubusercontent.com/pyecharts/pyecharts/master/images/flask-1.gif)
-
+![flask-1](https://user-images.githubusercontent.com/19553554/35081437-1f42073a-fc4f-11e7-8479-ca2a0581d966.gif)
 ## 小结
 
 可以看到，在 Flask app 中加入 pyecharts 图表只需要简单的几个步骤而已，欢迎尝试更多的图表类型。具体文档可以参考 ```pyecharts/docs```  文件夹。
