@@ -1,6 +1,6 @@
 # [pyecharts](https://github.com/chenjiandongx/pyecharts) [![Build Status](https://travis-ci.org/pyecharts/pyecharts.svg?branch=master)](https://travis-ci.org/pyecharts/pyecharts) [![codecov](https://codecov.io/gh/pyecharts/pyecharts/branch/master/graph/badge.svg)](https://codecov.io/gh/pyecharts/pyecharts) [![PyPI version](https://badge.fury.io/py/pyecharts.svg)](https://badge.fury.io/py/pyecharts) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-###简介
+### 简介
 
 pyecharts 是 [Echarts](https://github.com/ecomfe/echarts) 在 Python 的封装，pyecharts 提供了一系列接口用于生成 Echarts 的图表。Echarts 是一个百度开源的可视化 JS 库，用其作出来的图效果很赞，所以我就想看看有没有 Python 对应的接口，但发现没有令我满意的，所以就动手造了 pyecharts 这个轮子。
 
@@ -67,7 +67,7 @@ render() 方法将会在本地生成一个 render.html 的文件，使用浏览�
 
 ![pandas-numpy](https://user-images.githubusercontent.com/19553554/35104252-3e36cee2-fca3-11e7-8e43-09bbe8dbbd1e.png)
 
-####Web 环境
+#### Web 环境
 
 **pyecharts+Flask**
 
