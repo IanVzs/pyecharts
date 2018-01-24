@@ -1,134 +1,102 @@
-# [pyecharts](https://github.com/pyecharts/pyecharts) [![Build Status](https://travis-ci.org/pyecharts/pyecharts.svg?branch=master)](https://travis-ci.org/chenjiandongx/pyecharts) [![codecov](https://codecov.io/gh/chenjiandongx/pyecharts/branch/master/graph/badge.svg)](https://codecov.io/gh/chenjiandongx/pyecharts) [![PyPI version](https://badge.fury.io/py/pyecharts.svg)](https://badge.fury.io/py/pyecharts) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# [pyecharts](https://github.com/chenjiandongx/pyecharts) [![Build Status](https://travis-ci.org/pyecharts/pyecharts.svg?branch=master)](https://travis-ci.org/pyecharts/pyecharts) [![codecov](https://codecov.io/gh/pyecharts/pyecharts/branch/master/graph/badge.svg)](https://codecov.io/gh/pyecharts/pyecharts) [![PyPI version](https://badge.fury.io/py/pyecharts.svg)](https://badge.fury.io/py/pyecharts) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> pyecharts is a library to generate charts using Echarts. It simply provides the interface of 28+ kinds of charts between Echarts and Python.
+###简介
 
+pyecharts 是 [Echarts](https://github.com/ecomfe/echarts) 在 Python 的封装，pyecharts 提供了一系列接口用于生成 Echarts 的图表。Echarts 是一个百度开源的可视化 JS 库，用其作出来的图效果很赞，所以我就想看看有没有 Python 对应的接口，但发现没有令我满意的，所以就动手造了 pyecharts 这个轮子。
 
-## Introduction
-[Echarts](https://github.com/ecomfe/echarts) is an open source library from Baidu for data visualization in javascript. It has awesome demo pages so I started to look out for an interface library so that I could use it in Python. I ended up with [echarts-python](https://github.com/yufeiminds/echarts-python) on github but it lacks of documentation and was not updated for a while. Just like many other Python projects, I started my own project, pyecharts, referencing echarts-python and another library [pygal](https://github.com/Kozea/pygal).
+### 安装
 
-## Installation
-### Python Compatibility
+pyecharts 完全兼容 Python2 和 Python3
 
-pyecharts works on Python2.7 and Python3.4+.
+**Jupyter-Notebook**
 
-pyecharts handles all strings and files with unicode encoding and you **MUST** use unicode string on Python 2.
+pyecharts 支持在 Notebook 中渲染出图形，但首先请确保您已经安装了 Notebook 环境。下面是 Notebook 的安装方式。
 
-```python
-#coding=utf-8
-from __future__ import unicode_literals
+```shell
+$ pip install notebook
 ```
 
-### pyecharts
+**pyecharts**
 
-You can install it via pip
-```
-$ pip install pyecharts
+你可以通过 pip 安装 pyecharts
+
+```shell
+pip install pyecharts
 ```
 
-or clone it and install it
-```
+或者通过源码安装（请使用 ----recursive 参数）
+
+```shell
 $ git clone --recursive https://github.com/pyecharts/pyecharts.git
 $ cd pyecharts
 $ pip install -r requirements.txt
 $ python setup.py install
 ```
 
-## Basic Usage
+### 基本用法
 
-### Render to Local Html File
+#### 本地环境
 
 ```python
 from pyecharts import Bar
 
-attr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-v1 = [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
-v2 = [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+attr = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+v1 = [
+    2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 
+    135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+v2 = [
+    2.6, 5.9, 9.0, 26.4, 28.7, 70.7,
+    175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
 bar = Bar("Bar chart", "precipitation and evaporation one year")
-bar.add("precipitation", attr, v1, mark_line=["average"], mark_point=["max", "min"])
-bar.add("evaporation", attr, v2, mark_line=["average"], mark_point=["max", "min"])
+bar.add("precipitation", attr, v1,
+        mark_line=["average"], mark_point=["max", "min"])
+bar.add("evaporation", attr, v2,
+        mark_line=["average"], mark_point=["max", "min"])
 bar.render()
 ```
 
-It will create a file named *render.html* in the root directory, open file with your borwser.
+render() 方法将会在本地生成一个 render.html 的文件，使用浏览器打开即可看到效果！
 
-![usage-0](https://github.com/pyecharts/pyecharts/blob/master/images/usage-0.gif)
+![usage-0](https://user-images.githubusercontent.com/19553554/35314229-be3ee1d2-00ff-11e8-880e-8dea5bcd29ae.gif)
 
-### Export as Images or Pdf
+#### Notebook 环境
 
-[pyecharts-snapshot](https://github.com/pyecharts/pyecharts-snapshot) is a library which renders the output of pyecharts as a png, jpeg, gif image or a pdf file at command line or in your code.
+可与 Pandas/Numpy 等第三方库协作！ 
 
-See more detail at the repositoty.
+![pandas-numpy](https://user-images.githubusercontent.com/19553554/35104252-3e36cee2-fca3-11e7-8e43-09bbe8dbbd1e.png)
 
-## Platform Support
+####Web 环境
 
-pyecharts exposes chart API and template API so that it can work on some common platforms.
-
-### Work on Jupyter Notebook
-
-In the Notebook cell ,you can simply call the instance itself to diplay the chart.
-
-All chart classes in pyecharts implement the `_repr_html_` interface about [IPython Rich Display](http://ipython.readthedocs.io/en/stable/config/integrating.html#rich-display) .
-
-In the case of online jshost mode,you can also download as some file formats (ipynb/py/html/pdf) and run without jupyter notebook enviromnment.
-
-![pandas_numpy](https://user-images.githubusercontent.com/19553554/35104252-3e36cee2-fca3-11e7-8e43-09bbe8dbbd1e.png)
-
-### Integrate With Web Framework
-
-With the help of pyecharts API,it is easy to integrate pyecharts to your web projects, such as Flask and Django.
-
-Demo
+**pyecharts+Flask**
 
 ![flask-0](https://user-images.githubusercontent.com/19553554/35081158-3faa7c34-fc4d-11e7-80c9-2de79371374f.gif)
 
-## Advance Topics
+**pyecharts+Django**
 
-### Cusom Template FIles and Layout
+![django-0](https://user-images.githubusercontent.com/19553554/35081440-21efcf58-fc4f-11e7-8427-ed73306533e8.gif)
 
-pyecharts exposes engine API so that you can use your own template file and integrate with CSS framework.
+### 文档
 
-In addition,pyecharts also ships a lot of jinja2 template functions used in template files.
+* [中文文档](http://127.0.0.1:3000/#/zh-cn/)
+* [English](http://127.0.0.1:3000/#/en-us/)
 
-### Custom Map Library
-
-All map is hosted by the repository [echarts-china-cities-js](https://github.com/pyecharts/echarts-china-cities-js) and [echarts-countries-js](https://github.com/pyecharts/echarts-countries-js) .
-
-## Documentation
-
-* [中文文档](https://github.com/chenjiandongx/pyecharts/tree/master/docs/zh-cn)
-* [English Documentation](https://github.com/chenjiandongx/pyecharts/tree/master/docs/en-us)
-
-## Examples
-
-All examples is hosted on the repository [pyecharts-users-cases](https://github.com/pyecharts/pyecharts-users-cases) .
-
-## Test
-
-### Unit Test
-
-You should install the libraries in the requirements.txt files.
-
-```
-pip install -r test\requirements.txt
-```
-
-And run with the [nose](https://nose.readthedocs.io/en/latest/) commands.
+### 测试
 
 ```shell
+$ cd test
+$ nosetests --with-coverage --cover-package pyecharts --cover-package test
+
+在 Linux/macOS 系统下可使用
 $ make
 ```
 
-### Quality Assurance
+### 开发团队
 
- [flake8](http://flake8.pycqa.org/en/latest/index.html) and [pylint](https://www.pylint.org/) are used to improve the quality of code.
+[![chenjiandongx](https://user-images.githubusercontent.com/19553554/35314407-c7f538ce-0100-11e8-8943-5b4dc8ec8e35.png)](https://github.com/chenjiandongx)  [![chfw](https://user-images.githubusercontent.com/19553554/35314405-c5618c5c-0100-11e8-99b0-93f6b38f8717.png)](https://github.com/chfw)  [![kinegratii](https://user-images.githubusercontent.com/19553554/35314406-c6c1d69c-0100-11e8-89d3-df66688f44b2.png)](https://github.com/kinegratii)
 
-### Continuous Integration
 
-The project is developed with [Travis CI](https://travis-ci.org/) .
+### LICENSE 
 
-## Author
-
-pyecharts is developed and maintained by chenjiandongx ([chenjiandongx@qq.com](chenjiandongx@qq.com))
-
-## License
-pyecharts is released under the MIT License. See LICENSE for more information.
+[MIT](https://github.com/pyecharts/pyecharts/blob/master/LICENSE)
