@@ -94,7 +94,7 @@ $ make
 
 ### 开发团队
 
-[![chenjiandongx](https://user-images.githubusercontent.com/19553554/35314407-c7f538ce-0100-11e8-8943-5b4dc8ec8e35.png)](https://github.com/chenjiandongx)  [![chfw](https://user-images.githubusercontent.com/19553554/35314405-c5618c5c-0100-11e8-99b0-93f6b38f8717.png)](https://github.com/chfw)  [![kinegratii](https://user-images.githubusercontent.com/19553554/35314406-c6c1d69c-0100-11e8-89d3-df66688f44b2.png)](https://github.com/kinegratii)
+[![chenjiandongx](https://user-images.githubusercontent.com/19553554/35315207-02ea37ea-0106-11e8-9f9f-8fb26922c492.png)](https://github.com/chenjiandongx)  [![chfw](https://user-images.githubusercontent.com/19553554/35315208-032a38a4-0106-11e8-85f1-7f601330027f.png)](https://github.com/chfw)  [![kinegratii](https://user-images.githubusercontent.com/19553554/35315209-0368f8fa-0106-11e8-99f6-c71d7624a2c9.png)](https://github.com/kinegratii)
 
 
 ### LICENSE 
